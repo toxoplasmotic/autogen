@@ -23,5 +23,3 @@ jobs:
         context: .
         push: true
         tags: toxoplasmotic/autogen:${{ github.event.inputs.version }}
-        secrets:
-            personal-access-token: ${{ secrets.CR_PAT }}
