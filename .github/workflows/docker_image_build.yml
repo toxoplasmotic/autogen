@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: Build_Environment
+    environment: 'Build Environment'
     steps:
     - uses: actions/checkout@v2
 
