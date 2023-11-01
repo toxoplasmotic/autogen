@@ -10,6 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: Build_Environment
     steps:
     - uses: actions/checkout@v2
 
@@ -22,3 +23,5 @@ jobs:
         context: .
         push: true
         tags: toxoplasmotic/autogen:${{ github.event.inputs.version }}
+        secrets:
+            personal-access-token: ${{ secrets.CR_PAT }}
