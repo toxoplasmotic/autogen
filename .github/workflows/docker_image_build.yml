@@ -39,4 +39,6 @@ jobs:
       with:
         image: ghcr.io/toxoplasmotic/autogen:${{ github.event.inputs.version }}
         shell: bash
-        run: tail ./agents/Accountant.md
+        env:
+          OAI_CONFIG_LIST: ${{ secrets.OAI_CONFIG_LIST }}
+        run: python ./test/test_with_openai.py
